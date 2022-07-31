@@ -1,0 +1,133 @@
+<html>
+    <head>
+        <style>
+            .heading{
+                text-align: center;
+                font-size: larger;
+                margin-top: 100;
+               color: aliceblue;
+            }
+            .button{
+              width: 60;
+              height: 60;
+              font-size: 20;
+            border-color: black;
+            background-color: blanchedalmond;
+            color: brown;
+
+            }
+            .center{
+                margin-left: 550;
+                margin-right: 900;
+                margin-top: 100;
+                background-color: darksalmon;
+                color:white;
+            }
+        </style>
+<div class="heading"><h1><b>CALCULATOR</b></h1></div>
+    </head>
+    <body style="background-color: black;">
+<table class="center">
+    <tr>
+        <td colspan="4"><input type="text" style="width: 250; height: 60;" id="ans"></td>
+        
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="(" class="button" onclick="display('(')">
+        </td>
+        <td>
+            <input type="button" value=")" class="button" onclick="display(')')">
+            </td>
+
+            <td>
+                <input type="button" value="ans" class="button" onclick="solve()">
+             </td>
+
+             <td><input type="button" value="C" class="button"onclick="clearScrn()"></td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="9" class="button" onclick="display('9')">
+        </td>
+        <td>
+            <input type="button" value="8" class="button" onclick="display('8')">
+            </td>
+
+            <td>
+                <input type="button" value="7" class="button" onclick="display('7')">
+             </td>
+
+             <td>
+                <input type="button" value="*" class="button" onclick="display('*')">
+             </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="6" class="button" onclick="display('6')">
+        </td>
+        <td>
+            <input type="button" value="5" class="button" onclick="display('5')">
+            </td>
+
+            <td>
+                <input type="button" value="4" class="button" onclick="display('4')">
+             </td>
+
+             <td>
+                <input type="button" value="-" class="button" onclick="display('-')">
+             </td>
+    </tr>
+
+    <tr>
+        <td>
+            <input type="button" value="3" class="button" onclick="display('3')">
+        </td>
+        <td>
+            <input type="button" value="2" class="button" onclick="display('2')">
+            </td>
+
+            <td>
+                <input type="button" value="1" class="button" onclick="display('1')">
+             </td>
+
+             <td>
+                <input type="button" value="+" class="button" onclick="display('+')">
+             </td>
+    </tr>
+    <tr>
+        <td>
+            <input type="button" value="0"class="button" onclick="display('0')">
+        </td>
+        <td>
+            <input type="button" value="." class="button" onclick="display('.')">
+            </td>
+
+            <td>
+                <input type="button" value="%" class="button" onclick="display('%')">
+             </td>
+             <td>
+                <input type="button" value="/" class="button" onclick="display('/')">
+             </td>
+             
+    </tr>
+</table>
+<script type="text/javascript">
+    function display(val){
+        document.getElementById('ans').value+=val
+
+          }
+          function solve(){
+              let x=document.getElementById('ans').value
+              let y=eval(x);
+              document.getElementById('ans').value=y
+          }
+          function clearScrn(){
+              document.getElementById('ans').value= '  '         
+             }
+    
+</script>
+    </body>
+</html>
